@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episteme - Blog Interactivo de Epistemología</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="viewport">
+        <div id="app">
+
+            <!-- HEADER (Fixed or part of canvas) -->
+            <header class="main-header">
+                <div class="logo">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Episteme <span>Blog académico</span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" data-target="hero">Inicio</a></li>
+                        <li><a href="#" data-target="intro">Introducción</a></li>
+                        <li><a href="#" data-target="desarrollo">Desarrollo</a></li>
+                        <li><a href="#" data-target="recursos">Recursos</a></li>
+                        <li><a href="#" data-target="conclusiones">Conclusiones</a></li>
+                        <li><a href="#" data-target="biblio">Bibliografía</a></li>
+                    </ul>
+                </nav>
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </header>
+
+            <!-- SECTION 0: HERO -->
+            <section id="hero" class="section active">
+                <div class="hero-content">
+                    <h1>¿Cuáles son los sentidos de la <span class="highlight">epistemología?</span></h1>
+                    <p class="subtitle">Reflexiones sobre el conocimiento en las ciencias humanas y sociales</p>
+                    <button id="start-btn" class="btn-primary">Comenzar a leer <i
+                            class="fa-solid fa-arrow-down"></i></button>
+
+                    <div class="meta-info">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <strong>Estudiante:</strong>
+                                <p>Ana Mile Riascos</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-university"></i>
+                            <div>
+                                <strong>Universidad del Bienestar</strong>
+                                <p>Trabajo Social - Epistemología</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <div>
+                                <strong>Mayo, 2025</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <img src="assets/hero.png" alt="Ilustración de Epistemología">
+                    <div class="sticky-note">
+                        <p>"No se trata solo de conocer el mundo, sino de comprender cómo lo conocemos."</p>
+                        <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 1: INTRODUCCIÓN -->
+            <section id="intro" class="section">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2>Introducción</h2>
+                </div>
+                <div class="section-grid">
+                    <div class="image-wrapper">
+                        <img src="assets/intro.png" alt="Libros y gafas">
+                    </div>
+                    <div class="text-content">
+                        <p>La epistemología estudia el origen, la naturaleza, los límites y la validez del conocimiento.
+                            En las ciencias humanas y sociales, nos invita a comprender que el conocimiento no es
+                            neutral, sino construido históricamente, desde contextos, intereses y perspectivas diversas.
+                        </p>
+                        <div class="tip-box">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p>Este blog responde a la pregunta: <strong>¿Cuáles son los sentidos de la
+                                    epistemología?</strong> y cómo se diferencian los discursos epistemológicos de las
+                                discusiones científicas en las ciencias humanas y sociales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: DESARROLLO PRINCIPAL -->
+            <section id="desarrollo" class="section">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2>Desarrollo principal</h2>
+                </div>
+                <div class="grid-cards">
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+                        <h3>Sentido crítico</h3>
+                        <p>Cuestiona las verdades absolutas y analiza los intereses que influyen en la producción del
+                            conocimiento.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                        <h3>Sentido interpretativo</h3>
+                        <p>Busca comprender los significados humanos, considerando el lenguaje, la cultura y la
+                            historia.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Sentido metodológico</h3>
+                        <p>Orienta los métodos de investigación y las técnicas para producir conocimiento válido y
+                            relevante.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <h3>Sentido ético y social</h3>
+                        <p>Reflexiona sobre la responsabilidad de la ciencia y su compromiso con la justicia social y la
+                            dignidad humana.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: DISCURSOS VS DISCUSIONES -->
+            <section id="discursos" class="section">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2>Discursos epistemológicos vs. discusiones científicas</h2>
+                </div>
+                <div class="comparison-container">
+                    <div class="comp-box discursos">
+                        <h3>Discursos epistemológicos</h3>
+                        <ul>
+                            <li>Reflexionan sobre la naturaleza del conocimiento.</li>
+                            <li>Analizan paradigmas, supuestos y formas de interpretar la realidad.</li>
+                            <li>Son de carácter filosófico y crítico.</li>
+                            <li>Preguntan: ¿cómo conocemos?</li>
+                        </ul>
+                    </div>
+                    <div class="vs-circle">VS</div>
+                    <div class="comp-box discusiones">
+                        <h3>Discusiones científicas</h3>
+                        <ul>
+                            <li>Se enfocan en teorías, métodos, datos y resultados.</li>
+                            <li>Buscan explicar fenómenos sociales concretos.</li>
+                            <li>Son de carácter metodológico y empírico.</li>
+                            <li>Preguntan: ¿qué sucede y por qué?</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: RECURSOS MULTIMEDIA -->
+            <section id="recursos" class="section">
+                <div class="section-header">
+                    <span class="section-number">4</span>
+                    <h2>Recursos multimedia</h2>
+                </div>
+                <div class="multimedia-grid">
+                    <div class="media-box video">
+                        <h3><i class="fa-solid fa-video"></i> Video explicativo</h3>
+                        <div class="media-placeholder">
+                            <i class="fa-solid fa-play"></i>
+                            <span>¿Qué es la epistemología?</span>
+                        </div>
+                        <a href="#" class="media-link">Ver video</a>
+                    </div>
+                    <div class="media-box podcast">
+                        <h3><i class="fa-solid fa-microphone"></i> Podcast</h3>
+                        <div class="audio-player">
+                            <div class="player-controls">
+                                <i class="fa-solid fa-play"></i>
+                                <div class="progress-bar"></div>
+                                <span>3:45</span>
+                            </div>
+                            <p>Epistemología en ciencias sociales</p>
+                        </div>
+                        <a href="#" class="media-link">Escuchar audio</a>
+                    </div>
+                    <div class="media-box timeline">
+                        <h3><i class="fa-solid fa-clock"></i> Línea del tiempo</h3>
+                        <div class="timeline-preview">
+                            <div class="tl-item"><span>D. Hume</span><span>Siglo XVIII</span></div>
+                            <div class="tl-item"><span>K. Popper</span><span>Siglo XX</span></div>
+                        </div>
+                        <a href="#" class="media-link">Ver línea del tiempo</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: CONCLUSIONES -->
+            <section id="conclusiones" class="section">
+                <div class="section-header">
+                    <span class="section-number">5</span>
+                    <h2>Conclusiones</h2>
+                </div>
+                <div class="section-grid reverse">
+                    <div class="illustration-placeholder">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="text-content">
+                        <p>La epistemología nos permite comprender que el conocimiento es múltiple, dinámico y situado.
+                            En las ciencias humanas y sociales, pensar epistemológicamente significa reconocer la
+                            importancia del contexto, la interpretación y la ética en la producción de conocimiento.</p>
+                        <p>Como futuras trabajadoras sociales, este análisis fortalece nuestra mirada crítica y nuestro
+                            compromiso con la transformación social. <i class="fa-solid fa-heart highlight"></i></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: BIBLIOGRAFÍA -->
+            <section id="biblio" class="section">
+                <div class="section-header">
+                    <span class="section-number">6</span>
+                    <h2>Bibliografía</h2>
+                </div>
+                <div class="biblio-content">
+                    <ul>
+                        <li>Cárcamo, H. (2005). Hermenéutica y análisis cualitativo. <em>Cinta de Moebio</em>, 23,
+                            204-216.</li>
+                        <li>Facuse, M. (2003). Una epistemología pluralista. <em>Revista electrónica de epistemología de
+                                ciencias sociales</em>, 17, 148-161.</li>
+                        <li>García Jiménez, L. (2008). Aproximación epistemológica al concepto de ciencia.
+                            <em>Andamios</em>, 4(8), 185-212.</li>
+                        <li>Habermas, J. (2002). <em>Ciencia y técnica como ideología</em>. Madrid: Tecnos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="main-footer">
+                <p class="quote">"La epistemología no solo pregunta qué conocemos, sino también quiénes somos cuando
+                    conocemos la realidad." <i class="fa-solid fa-heart"></i></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </footer>
+
+            <!-- NAVIGATION CONTROLS -->
+            <div class="nav-controls">
+                <button id="next-btn" class="btn-nav" title="Siguiente sección">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
