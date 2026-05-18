@@ -1,13 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = ['hero', 'intro', 'desarrollo', 'discursos', 'recursos', 'conclusiones', 'biblio'];
     let currentSectionIndex = 0;
+    let lastScrollTop = 0;
 
     const startBtn = document.getElementById('start-btn');
     const nextBtn = document.getElementById('next-btn');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const header = document.querySelector('.main-header');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
 
     // Initialize
     updateNavigation();
+
+    // Add scroll listener to all sections for smart header
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('scroll', handleScroll);
+        }
+    });
+
+    // Hamburger Menu Toggle
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
 
     // Event Listeners
     startBtn.addEventListener('click', () => {
@@ -18,8 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentSectionIndex < sections.length - 1) {
             navigateTo(currentSectionIndex + 1);
         } else {
-            // Loop back to start or just stay? Let's stay or loop.
-            navigateTo(0); // Loop back to hero for now
+            navigateTo(0); // Loop back to hero
         }
     });
 
@@ -30,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetIndex = sections.indexOf(targetId);
             if (targetIndex !== -1) {
                 navigateTo(targetIndex);
+                // Close mobile menu on navigation
+                nav.classList.remove('active');
             }
         });
     });
@@ -57,6 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800); // Matches transition duration
 
         currentSectionIndex = index;
+        
+        // Reset scroll position and header state on navigation
+        lastScrollTop = 0;
+        header.classList.remove('header-hidden');
+        
         updateNavigation();
     }
 
@@ -88,5 +113,22 @@ document.addEventListener('DOMContentLoaded', () => {
             nextBtn.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
             nextBtn.setAttribute('title', 'Siguiente sección');
         }
+    }
+
+    function handleScroll(e) {
+        const scrollTop = e.target.scrollTop;
+        
+        // Only trigger if moved significantly
+        if (Math.abs(scrollTop - lastScrollTop) < 10) return;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down & past header
+            header.classList.add('header-hidden');
+            nav.classList.remove('active'); // Close menu if open
+        } else {
+            // Scrolling up
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop;
     }
 });
