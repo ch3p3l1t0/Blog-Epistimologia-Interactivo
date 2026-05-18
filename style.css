@@ -703,6 +703,72 @@ body.show-controls .nav-controls {
 }
 
 /* ==========================================
+   IMAGE MODAL (ZOOM EFFECT)
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--secondary);
+}
+
+.zoomable-img {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.zoomable-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.click-tip {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ==========================================
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
 

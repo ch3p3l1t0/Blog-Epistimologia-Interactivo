@@ -54,6 +54,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Image Modal Logic
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('img01');
+    const timelineImg = document.getElementById('timeline-img');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (timelineImg) {
+        timelineImg.addEventListener('click', () => {
+            modal.style.display = "block";
+            modalImg.src = timelineImg.src;
+        });
+    }
+
+    if (closeModal) {
+        closeModal.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    }
+
+    // Close on click outside
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
     function navigateTo(index) {
         if (index === currentSectionIndex) return;
 
